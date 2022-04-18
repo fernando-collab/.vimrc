@@ -250,3 +250,8 @@ set cursorcolumn
 set showmatch
 "elimina el como de compatibilidad con vi
 set nocompatible
+"cambiar de ventana
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
