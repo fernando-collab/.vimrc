@@ -19,6 +19,7 @@ set backspace=2
 set guioptions-=T
 set guioptions-=L
 set nocompatible
+set t_Co=256
 imap jk <Esc>
 
 "Mapping to reload config
@@ -48,16 +49,18 @@ Plug 'majutsushi/tagbar'
 Plug 'preservim/NERDTree'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'sheerun/vim-polyglot'
-Plug 'morhetz/gruvbox'
+"Plug 'morhetz/gruvbox'
 Plug 'easymotion/vim-easymotion'
 Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'severin-lemaignan/vim-minimap'
+Plug 'sonph/onehalf', { 'rtp': 'vim' }
 call plug#end()
 
 nmap <Leader>nt :NERDTreeFind<CR>
 nmap <Leader>s <Plug>(easymotion-s2)
-colorscheme gruvbox
-let g:gruvbox_contrast_dark = "hard"
+"colorscheme
+colorscheme onehalflight
 
 "configuracion para el autocompletado
 "
@@ -228,7 +231,7 @@ nnoremap <silent><nowait> <space>K  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>P  :<C-u>CocListResume<CR>
 "tema de la barra inferior
-let g:airline_theme='simple'
+let g:airline_theme='onehalfdark'
 "tagbar
 nmap <F8> :TagbarToggle<CR>
 "no guardar en la sawp nada
@@ -255,3 +258,7 @@ map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
+"minimap
+let g:minimap_highlight='Visual'
+
+
